@@ -1,0 +1,50 @@
+@import "_mixins";
+@import "_vars";
+
+header {
+    @include parallax-effect('../img/animated-banner.gif',1000px);
+    grid-column: 1/3;
+
+    nav {
+        @include flex();
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 10px;
+        font-size: 20px;
+
+
+
+        a {
+            color: $secondary-color;
+            text-decoration: none;
+            &:hover {
+                color: $selected;
+            }
+        }
+
+        ul{
+            @include flex();
+            align-items: center;
+        }
+
+        .menu{
+            justify-content: space-around;
+            margin-top: 30px;
+            width: 50%;
+        }
+
+        .home{
+            height: 3em;
+        }
+    }
+
+    .banner {
+        width: 100%;
+        padding: 0;
+
+        img {
+            width: 100%;
+            height: 700px;
+        }
+    }
+}
